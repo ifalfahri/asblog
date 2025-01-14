@@ -7,7 +7,27 @@ import ThemeIcon from './ThemeIcon.astro';
 <header>
   <nav>
     <Hamburger />
-    <ThemeIcon />
     <Navigation />
+    <ThemeIcon />
   </nav>
 </header>
+
+<style>
+
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
+  @media (min-width: 768px) {
+    nav {
+      justify-content: flex-start;
+    }
+
+    nav > *:not(:last-child) {
+      margin-right: 1rem;
+    }
+  }
+</style>
