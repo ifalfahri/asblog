@@ -1,6 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-const { pageTitle } = Astro.props;
+const pageTitle = "About Me";
 
 const identity = {
   firstName: "Aldo",
@@ -20,7 +20,7 @@ const fontWeight = "bold";
 const textCase = "uppercase";
 ---
 
-<BaseLayout pageTitle={pageTitle}>
+<BaseLayout pageTitle={pageTitle} />
 <p>This is where I will post about my journey learning Astro.</p>
 
 <p>
@@ -65,8 +65,6 @@ const textCase = "uppercase";
   )
 }
 
-</BaseLayout>
-
 <style define:vars={{ skillColor, fontWeight, textCase }}>
   h1 {
     color: purple;
@@ -77,4 +75,4 @@ const textCase = "uppercase";
     font-weight: var(--fontWeight);
     text-transform: var(--textCase);
   }
-</>
+</style>
